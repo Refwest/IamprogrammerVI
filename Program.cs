@@ -37,25 +37,36 @@ namespace IamprogrammerVI
 
             ////// !Constructors
 
-            //Student s1 = new Student("Karol", 26, 95);
+            Student s1 = new Student("Karol", 26, 95);           
+            s1.Hello();
 
-            //Console.WriteLine(s1);
+            Student s3 = new Student("Artur", 26, 90);
+            s3.Hello();
 
+            Student s2 = new Student("Kuba", 27);
+            s2.SetName("Mi");
+            Console.WriteLine(s2.GetName());
+            s2.Hello();
+            s2.SetAge(28);
+            s2.SetFinalScore(50);
+            Console.WriteLine(s2.GetAge());
+            Console.WriteLine(s2.GetFinalScore());
+            
+                
+            
 
-            //s1.Hello();
-
-            //int num = 0;
-            //string numString = num.ToString();
-            //Console.WriteLine(numString);
-
-            //!2
-
+            Student s4 = new Student("Krzysztof", 15);
+            Console.WriteLine(s4.GetName());
 
             
-                long a = 9876543210;
-                Kata.Digitize(a);
-                Console.WriteLine(a);
-            
+
+
+            //////!2
+
+            ////    long a = 9876543210;
+            ////    Kata.Digitize(a);
+            ////    Console.WriteLine(a);
+
 
         }
 
