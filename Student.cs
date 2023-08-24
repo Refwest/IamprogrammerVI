@@ -34,6 +34,8 @@ namespace IamprogrammerVI
             this.finalScore = finalScore;
         }
 
+        // 53. Constructors
+
         //public Student(string name, int age)
         //{
         //    this.name = name;
@@ -49,79 +51,159 @@ namespace IamprogrammerVI
             
         }
 
-        public string GetName()
+        // 55. Properties
+
+        public string Name
         {
-            if (age > 18)
+            get
             {
-                return name;
+                if (age > 18)
+                {
+                    return name;
+                }
+                else
+                {
+                    return "This student is too young to know his name";
+                }
             }
-            else
+            set
             {
-                return "This student is too young to know his name";
+                if (value != "" & value.Length > 1)
+                {
+                    name = value;
+                }
             }
         }
 
-        public void SetName(string NewName)
+        public int Age
         {
-            if (NewName != "" & NewName.Length > 1)
+            get 
             {
-                name = NewName;
+                if (age >= 18)
+                {
+                    return age;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            set 
+            {
+                if (age >= 18)
+                {
+                    age = value;
+                }
+            }
+        
+        }
+
+        public double FinalScore
+        {
+            get
+            {
+                if (age >= 18)
+                {
+                    return finalScore;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            set
+            {
+                if (finalScore < 65)
+                {
+                    finalScore = 65;
+                }
+                else if (finalScore > 100)
+                {
+                    finalScore = 100;
+                }
+                else
+                {
+                    finalScore = value;
+                }
+                
             }
         }
 
-        public int GetAge()
-        {
-            if (age >= 18)
-            {
-                return age;
-            }
-            else
-            {
-                return -1;
-            }
-        }
 
-        public int SetAge(int NewAge)
-        {
-            if (age >= 18 & NewAge >0)
-            {
-                age = NewAge;
-                return age;
-            }
-            else
-            {
-                return -1;
-            }
-        }
+        //// 54. Get and Set methods
+        //public string GetName()
+        //{
+        //    if (age > 18)
+        //    {
+        //        return name;
+        //    }
+        //    else
+        //    {
+        //        return "This student is too young to know his name";
+        //    }
+        //}
 
-        public double GetFinalScore()
-        {
-            if (age >= 18)
-            {
-                return finalScore;
-            }
-            else
-            {
-                return -1;
-            }
-        }
+        //public void SetName(string NewName)
+        //{
+        //    if (NewName != "" & NewName.Length > 1)
+        //    {
+        //        name = NewName;
+        //    }
+        //}
 
-        public double SetFinalScore(double NewFinalSore)
-        {
-            if (finalScore < 65)
-            {
-                finalScore = 65;
-            }
-            else if (finalScore > 100)
-            {
-                finalScore = 100;
-            }
-            else
-            {
-                finalScore = NewFinalSore;
-            }
-            return finalScore;
-        }
+        //public int GetAge()
+        //{
+        //    if (age >= 18)
+        //    {
+        //        return age;
+        //    }
+        //    else
+        //    {
+        //        return -1;
+        //    }
+        //}
+
+        //public int SetAge(int NewAge)
+        //{
+        //    if (age >= 18 & NewAge >0)
+        //    {
+        //        age = NewAge;
+        //        return age;
+        //    }
+        //    else
+        //    {
+        //        return -1;
+        //    }
+        //}
+
+        //public double GetFinalScore()
+        //{
+        //    if (age >= 18)
+        //    {
+        //        return finalScore;
+        //    }
+        //    else
+        //    {
+        //        return -1;
+        //    }
+        //}
+
+        //public double SetFinalScore(double NewFinalSore)
+        //{
+        //    if (finalScore < 65)
+        //    {
+        //        finalScore = 65;
+        //    }
+        //    else if (finalScore > 100)
+        //    {
+        //        finalScore = 100;
+        //    }
+        //    else
+        //    {
+        //        finalScore = NewFinalSore;
+        //    }
+        //    return finalScore;
+        //}
 
 
 
